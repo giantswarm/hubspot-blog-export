@@ -3,7 +3,8 @@
 A set of Python scripts to facilitate blog migration from HubSpot's website platform to Ghost.
 
 * Export content from HubSpot to JSON and HTML
-* Make content ready for import to Ghost
+* Export comments to to WXR/Disqus format
+* Create an import file ready for import in Ghost
 
 Limitations:
 
