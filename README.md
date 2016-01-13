@@ -1,5 +1,15 @@
 # Export content from HubSpot blog
 
+A set of Python scripts to facilitate blog migration from HubSpot's website platform to Ghost.
+
+* Export content from HubSpot to JSON and HTML
+* Make content ready for import to Ghost
+
+Limitations:
+
+* Ignores some meta data maintained in hubspot
+* Ghost tags and authors are not generated
+
 ## Setup
 
 ```
