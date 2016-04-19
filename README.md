@@ -1,4 +1,10 @@
-# Export content from HubSpot blog
+# Export content from HubSpot blog to Ghost and Disqus
+
+Exports blog posts and comments from a HubSpot blog to Ghost JSON and Disqus-ready XML.
+
+## Known limitation
+
+Article meta data like tags, categories and authors is not exported and has to maintained manually.
 
 A set of Python scripts to facilitate blog migration from HubSpot's website platform to Ghost.
 
