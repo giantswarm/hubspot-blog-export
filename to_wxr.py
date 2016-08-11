@@ -53,7 +53,10 @@ if __name__ == "__main__":
         link.text = post["published_url"]
 
         creator = etree.SubElement(item, "{http://purl.org/dc/elements/1.1/}creator")
-        creator.text = post["blog_author"]["full_name"]
+        try:
+            creator.text = post["blog_author"]["full_name"]
+        except KeyError:
+            creator.text = "Unnamed Author"
 
         content = etree.SubElement(item, "{http://purl.org/rss/1.0/modules/content/}encoded")
         content.text = etree.CDATA("")
