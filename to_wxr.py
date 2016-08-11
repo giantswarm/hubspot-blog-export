@@ -56,8 +56,10 @@ if __name__ == "__main__":
         creator.text = post["blog_author"]["full_name"]
             
         content = etree.SubElement(item, "{http://purl.org/rss/1.0/modules/content/}encoded")
-        content.text = etree.CDATA(post["post_body"])
-        
+        content.text = etree.CDATA("")
+        if post["post_body"] is not None:
+            content.text = etree.CDATA(post["post_body"])
+
         # This remains empty
         thread_id = etree.SubElement(item, "{http://www.disqus.com/}thread_identifier")
         thread_id.text = post["slug"]
