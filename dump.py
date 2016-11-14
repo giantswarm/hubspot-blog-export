@@ -77,10 +77,11 @@ def main():
             json_file.write(json.dumps(post, indent=2, sort_keys=True))
         html_filename = "%s/post_%s.html" % (folder, post["id"])
         with open(html_filename, "wb") as html_file:
-            html_file.write(post["post_body"].encode("utf8"))
+            if "post_body" in post and post["post_body"] is not None:
+                html_file.write(post["post_body"].encode("utf8"))
         count += 1
     print("Dumped %d posts." % count)
-    
+
     # export comments
     count = 0
     for comment in hsclient.iterate_comments():
